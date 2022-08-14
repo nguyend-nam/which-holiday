@@ -91,7 +91,7 @@ export default function Home() {
   const [isSSR, setISSR] = useState(true);
   const [country, setCountry] = useState("");
   const [year, setYear] = useState(() => {
-    return new Date().getFullYear() - 1;
+    return (new Date().getFullYear() - 1).toString();
   });
   const [month, setMonth] = useState(1);
   const [date, setDate] = useState(1);
