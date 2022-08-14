@@ -163,7 +163,7 @@ export default function Home() {
                 onMonthClick={setMonth}
               />
             ) : null}
-            {year !== "2021" ? (
+            {year !== "2021" && year !== 2021 ? (
               <>
                 <div>
                   Anh ban a, toi dung free plan api chi cho fetch 2021 thoi
