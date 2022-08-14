@@ -7,6 +7,7 @@ import { countries } from "../constants/countries";
 import { years } from "../constants/years";
 import styled from "styled-components";
 import { media, theme } from "../constants";
+import Image from "next/image";
 
 const MainContainer = styled.div``;
 
@@ -119,7 +120,7 @@ export default function Home() {
             placeholder="Select year"
             onChange={(val) => setYear(val)}
             defaultValue={year}
-            disabled
+            // disabled
             style={{ width: "100px" }}
           />
         </HeaderContainer>
@@ -133,7 +134,7 @@ export default function Home() {
               onDateClick={setDate}
               onMonthClick={setMonth}
             />
-            {country ? (
+            {country && year === "2021" ? (
               <div
                 style={{
                   marginTop: 20,
@@ -152,7 +153,7 @@ export default function Home() {
             ) : null}
           </CalendarContainer>
           <ListContainer>
-            {country ? (
+            {country && year === "2021" ? (
               <HolidayList
                 country={country}
                 year={year}
@@ -161,6 +162,19 @@ export default function Home() {
                 onDateClick={setDate}
                 onMonthClick={setMonth}
               />
+            ) : null}
+            {year !== "2021" ? (
+              <>
+                <div>
+                  Anh ban a, toi dung free plan api chi cho fetch 2021 thoi
+                </div>
+                <Image
+                  src="/pepe-sad.png"
+                  width={130}
+                  height={106}
+                  alt="pepe-sad"
+                />
+              </>
             ) : null}
           </ListContainer>
         </ContentWrapper>

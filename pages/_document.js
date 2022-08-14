@@ -21,15 +21,15 @@ export default function Document() {
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
         />
-        <link rel="icon" href="/icon.jpg" />
+        <link rel="icon" href="/pepe-sad.png" />
         <meta name="theme-color" content={theme.colors.primary} />
         <meta property="og:image" content="/og.jpg" />
-        <meta property="og:url" content="https://ngdnam.netlify.app" />
-        <meta property="og:site_name" content="Nam Nguyen" />
-        <meta property="og:title" content="Nam Nguyen" />
+        <meta property="og:url" content="https://which-holiday.vercel.app/" />
+        <meta property="og:site_name" content="Which holiday?" />
+        <meta property="og:title" content="Which holiday?" />
         <meta
           property="og:description"
-          content="Welcome to my personal website"
+          content="Select country and view holidays"
         />
       </Head>
       <body>
