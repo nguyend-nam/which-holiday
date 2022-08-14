@@ -47,8 +47,8 @@ const HeaderContainer = styled.div`
   top: 0;
   display: flex;
   flex-wrap: wrap;
-  & > *:nth-child(2) {
-    margin: 0 10px;
+  & > *:nth-last-child(-n + 2) {
+    margin: 0 5px;
   }
 `;
 
@@ -56,7 +56,7 @@ const LogoWrapper = styled.h1`
   color: ${theme.colors.lime600};
   ${media.md} {
     width: max-content;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
   }
   width: 100%;
   margin: 0;
