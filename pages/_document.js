@@ -23,7 +23,7 @@ export default function Document() {
         />
         <link rel="icon" href="/pepe-sad.png" />
         <meta name="theme-color" content={theme.colors.primary} />
-        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image" content="/og.png" />
         <meta property="og:url" content="https://which-holiday.vercel.app/" />
         <meta property="og:site_name" content="Which holiday?" />
         <meta property="og:title" content="Which holiday?" />
