@@ -23,6 +23,7 @@ const DayButton = styled.button`
   user-select: none;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   color: ${theme.colors.blue900};
+  font-weight: 300;
   ${(props) => (!props.disabled ? "&:hover{background-color: #fafafa;}" : "")}
 `;
 
@@ -49,7 +50,7 @@ const DateToday = styled.div`
 
 const EventDates = styled.div`
   color: ${theme.colors.lime400};
-  font-weight: semi-bold;
+  font-weight: 500;
 `;
 
 const HeaderRow = styled.div`
@@ -104,6 +105,7 @@ const DayInCalendar = styled.div`
 
 const DayInOtherMonth = styled(DayButton)`
   background: #f5f5f5 !important;
+  color: #ccc;
 `;
 
 const months = [
@@ -179,11 +181,9 @@ export function Calendar(props) {
       } /* Days of previous or next month */ else
         dayList.push(
           <DayInOtherMonth key={i} disabled>
-            <div className="py-1 text-gray-400">
-              {i < daysOfPrevMonth
-                ? countPrevMonth - daysOfPrevMonth + i + 1
-                : i - daysOfPrevMonth - daysOfCurrMonth + 1}
-            </div>
+            {i < daysOfPrevMonth
+              ? countPrevMonth - daysOfPrevMonth + i + 1
+              : i - daysOfPrevMonth - daysOfCurrMonth + 1}
           </DayInOtherMonth>
         );
     }

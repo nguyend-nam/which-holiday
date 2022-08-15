@@ -35,7 +35,7 @@ const ContentWrapper = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  background-color: ${theme.colors.white};
+  background-color: ${theme.colors.white}aa;
   box-shadow: 0 3px 10px #00000018;
   ${media.md} {
     padding: 20px 50px;
@@ -50,6 +50,7 @@ const HeaderContainer = styled.div`
   & > *:nth-last-child(-n + 2) {
     margin: 0 5px;
   }
+  backdrop-filter: blur(10px);
 `;
 
 const LogoWrapper = styled.h1`
