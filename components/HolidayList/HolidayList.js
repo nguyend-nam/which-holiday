@@ -12,6 +12,10 @@ const HolidayCard = styled.button`
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
+  transition: box-shadow 0.3s;
+  &:hover{
+    box-shadow: 0 3px 14px #00000018;
+  }
   &:last-child {
     margin-bottom: 5px;
   }
