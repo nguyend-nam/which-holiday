@@ -15,8 +15,8 @@ const HolidayCard = styled.button`
   &:last-child {
     margin-bottom: 5px;
   }
-  &:nth-child(odd) {
-    margin-right: 10px;
+  &:nth-child(even) {
+    margin-left: 10px;
   }
   & > h3 {
     margin: 0;
