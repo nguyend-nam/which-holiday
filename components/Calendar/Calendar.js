@@ -48,7 +48,7 @@ const DateToday = styled.div`
 `;
 
 const EventDates = styled.div`
-  color: ${theme.colors.lime600};
+  color: ${theme.colors.lime400};
   font-weight: semi-bold;
 `;
 

@@ -8,7 +8,6 @@ const HolidayCard = styled.button`
   width: calc(50% - 5px);
   background-color: ${theme.colors.white};
   cursor: pointer;
-  box-shadow: 0 2px 7px #00000018;
   border: 1px solid #f0f0f0;
   padding: 15px;
   border-radius: 10px;
@@ -36,15 +35,25 @@ const HolidayCard = styled.button`
 
 export const HolidayList = (props) => {
   const [holidaysData, setData] = useState(undefined);
-  const { country, year, month, date, onDateClick, onMonthClick } = props;
+  const { country, year, month, date, onDateClick, onMonthClick, setHasEvent } =
+    props;
 
   const { data, loading } = useFetchHolidaysWithCache(country, year);
+  let hasHoliday = [];
 
   useEffect(() => {
     if (data) {
-      if (data?.holidays) setData(data.holidays);
+      if (data?.holidays) {
+        setData(data.holidays);
+        data.holidays.forEach((day) => {
+          if (month === parseInt(day.date.split("-")[1])) {
+            hasHoliday.push(parseInt(day.date.split("-")[2]));
+          }
+        });
+        setHasEvent(hasHoliday);
+      }
     }
-  }, [data]);
+  }, [data, month]);
 
   return (
     <>

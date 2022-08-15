@@ -95,6 +95,7 @@ export default function Home() {
   });
   const [month, setMonth] = useState(1);
   const [date, setDate] = useState(1);
+  const [hasEvent, setHasEvent] = useState([]);
 
   useEffect(() => {
     setISSR(false);
@@ -130,7 +131,7 @@ export default function Home() {
               year={year}
               month={month}
               today={date}
-              hasEvent={[]}
+              hasEvent={hasEvent}
               onDateClick={setDate}
               onMonthClick={setMonth}
             />
@@ -142,13 +143,10 @@ export default function Home() {
               >
                 <Legend
                   color={theme.colors.lime200}
-                  title="Selected month"
+                  title="Holiday(s) in selected month"
                   style={{ marginBottom: 5 }}
                 />
-                <Legend
-                  color={theme.colors.lime400}
-                  title="Selected date & month"
-                />
+                <Legend color={theme.colors.lime400} title="Selected holiday" />
               </div>
             ) : null}
           </CalendarContainer>
@@ -161,6 +159,7 @@ export default function Home() {
                 date={date}
                 onDateClick={setDate}
                 onMonthClick={setMonth}
+                setHasEvent={setHasEvent}
               />
             ) : null}
             {year !== "2021" && year !== 2021 ? (
