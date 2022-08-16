@@ -29,6 +29,7 @@ to see your project.
 
 - [x] [React](https://reactjs.org/)
 - [x] [Next.JS](https://nextjs.org/)
+- [x] [SWR](https://swr.vercel.app/)
 
 ### UI & styling
 
