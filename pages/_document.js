@@ -16,11 +16,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-        />
         <link rel="icon" href="/pepe-sad.png" />
         <meta name="theme-color" content={theme.colors.primary} />
         <meta property="og:image" content="/og.png" />
