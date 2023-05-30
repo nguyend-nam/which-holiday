@@ -1,9 +1,9 @@
 export const years = () => {
-  const lastYear = new Date().getFullYear() - 1;
+  const currentYear = new Date().getFullYear();
   const yearRange = [];
 
   for (let i = 0; i < 10; i++) {
-    yearRange.push(lastYear - i);
+    yearRange.push(currentYear - i);
   }
 
   return yearRange.map((year) => {
