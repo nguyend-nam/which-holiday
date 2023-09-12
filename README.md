@@ -4,7 +4,7 @@ This is a [Next.JS](https://nextjs.org/) project bootstrapped with [`create-next
 
 Built with [React](https://reactjs.org/) on top of [Next.JS](https://nextjs.org/) and [Styled-components](https://styled-components.com/).
 
-**View deploy:** [https://which-holiday.vercel.app/](https://which-holiday.vercel.app/).
+**View deploy:** [https://whichholiday.vercel.app/](https://whichholiday.vercel.app/).
 
 ## Quick Start
 
